@@ -1,0 +1,306 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-lapis: #2A5CAA;
+    --color-lapis-dark: #1F4580;
+    --color-lapis-deep: #163461;
+    --color-royal-blue: #1A3D7C;
+    --color-royal-blue-deep: #10264F;
+    --color-gold: #D4AF37;
+    --color-gold-bright: #F5C542;
+    --color-gold-light: #FDF5E2;
+    --color-gold-deep: #8C681E;
+    --color-sky: #CFE6FA;
+    --color-sky-deep: #A9CFEF;
+    --color-sand: #F2E8D5;
+    --color-sand-light: #FAF5EA;
+    --color-sand-deep: #E4D6BA;
+    --color-white: #FFFFFF;
+    --color-brass: #B8892B;
+    --color-brass-light: #EBD9A8;
+    --color-ink: #1B2A41;
+    --color-slate: #5B6B7B;
+    --color-correct: #2E9E5B;
+    --color-correct-light: #D6EFDF;
+    --color-amber: #E89B3C;
+    --color-amber-light: #FBE6C8;
+    --color-clay: #B5664A;
+    --color-clay-light: #F0D5C9;
+    --color-teal: #2F7F9E;
+    --color-teal-light: #CDE7EE;
+    --color-sage: #5F7F66;
+    --color-sage-light: #D5E5DA;
+    --color-blush: #F2D3C6;
+  }
+
+  /* Dark Green Background, Beige Boxes & Blue Icons theme variables */
+  :root.theme-dark-emerald,
+  .theme-dark-emerald {
+    --color-sand: #0B2516;
+    --color-sand-light: #103320;
+    --color-sand-deep: #071C10;
+    --color-ink: #FAF4E6;
+    --color-royal-blue: #1D4ED8;
+    --color-royal-blue-deep: #1E40AF;
+    --color-lapis: #2563EB;
+    --color-lapis-dark: #1D4ED8;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F2E8D5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  html.theme-dark-emerald,
+  body.theme-dark-emerald {
+    background-color: #0B2516 !important;
+    color: #FAF4E6 !important;
+  }
+
+  body {
+    color: #1B2A41;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Dark Green Background, Beige Boxes & Blue Icons Theme Overrides */
+/* 1. Global Viewport Backgrounds -> Deep Dark Green */
+.theme-dark-emerald .bg-\[\#F2E8D5\],
+.theme-dark-emerald .bg-\[\#F3E7CC\] {
+  background-color: #0B2516 !important;
+  color: #FAF4E6 !important;
+}
+
+/* 2. Top-level headers & page salutations on dark green background */
+.theme-dark-emerald main > div:not(.feedback-review-card):not([data-feedback-box]) h2:not(.feedback-title) {
+  color: #FAF4E6 !important;
+}
+.theme-dark-emerald main > div:not(.feedback-review-card):not([data-feedback-box]) p:not(.feedback-explanation):not(.feedback-review-text) {
+  color: #DECFB0 !important;
+}
+
+/* 2b. Scholar / Student Name & Profile in Dark Mode */
+.theme-dark-emerald .scholar-name-display,
+.theme-dark-emerald header h1 {
+  color: #FAF4E6 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.theme-dark-emerald .scholar-name-edit-icon {
+  color: #E5B842 !important;
+}
+
+.theme-dark-emerald .scholar-name-edit-icon:hover {
+  color: #FFF0A6 !important;
+}
+
+/* Input fields where student name is typed */
+.theme-dark-emerald .scholar-name-input,
+.theme-dark-emerald input[type="text"] {
+  background-color: #FAF4E6 !important;
+  color: #10264F !important;
+  border-color: #E5B842 !important;
+  caret-color: #10264F !important;
+}
+
+.theme-dark-emerald input[type="text"]::placeholder {
+  color: #7B8B9B !important;
+}
+
+.theme-dark-emerald .scholar-level-badge {
+  background-color: #F4E8D3 !important;
+  color: #785A16 !important;
+  border-color: #DAC6A4 !important;
+}
+
+/* Question prompt on dark green background */
+.theme-dark-emerald .question-prompt {
+  color: #FAF4E6 !important;
+}
+
+/* 3. Containers & Boxes -> Warm Elegant Beige */
+.theme-dark-emerald .bg-white {
+  background-color: #FAF4E6 !important;
+  border-color: #DFD0B2 !important;
+  color: #10264F !important;
+}
+
+.theme-dark-emerald .bg-\[\#FAF5EA\],
+.theme-dark-emerald .bg-\[\#FAF3E3\] {
+  background-color: #F7EEDB !important;
+  border-color: #DCC9AD !important;
+}
+
+.theme-dark-emerald .bg-\[\#FDF5E2\],
+.theme-dark-emerald .bg-\[\#FDF3D8\],
+.theme-dark-emerald .bg-\[\#FDF8EE\] {
+  background-color: #F4E8D3 !important;
+  border-color: #DAC6A4 !important;
+}
+
+.theme-dark-emerald .bg-\[\#ECE0C7\],
+.theme-dark-emerald .bg-\[\#F6EACF\] {
+  background-color: #EDE0C7 !important;
+  border-color: #D3BF9D !important;
+}
+
+.theme-dark-emerald .bg-\[\#EAF2FD\] {
+  background-color: #E6EFFD !important;
+  border-color: #BAD1F7 !important;
+}
+
+/* 4. Text inside beige boxes stays deep ink/navy for crystal clear readability */
+.theme-dark-emerald .bg-white .text-\[\#10264F\],
+.theme-dark-emerald .bg-\[\#FAF5EA\] .text-\[\#10264F\],
+.theme-dark-emerald .bg-\[\#FAF3E3\] .text-\[\#10264F\],
+.theme-dark-emerald .bg-\[\#FDF8EE\] .text-\[\#10264F\],
+.theme-dark-emerald .bg-\[\#FDF5E2\] .text-\[\#10264F\],
+.theme-dark-emerald .bg-white\/80,
+.theme-dark-emerald .bg-white\/90 {
+  color: #10264F !important;
+}
+
+.theme-dark-emerald .text-\[\#8C681E\] {
+  color: #785A16 !important;
+}
+
+/* 4b. Review Bar & Question Feedback in Dark Mode */
+.theme-dark-emerald .feedback-review-card,
+.theme-dark-emerald [data-feedback-box="true"] {
+  background-color: #FAF4E6 !important; /* Elegant warm beige box */
+  border-color: #C97A5E !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+}
+
+.theme-dark-emerald .feedback-review-card.wrong-feedback,
+.theme-dark-emerald [data-feedback-box="true"].wrong-feedback {
+  background-color: #FAF2E3 !important;
+  border-color: #B5664A !important;
+}
+
+.theme-dark-emerald .feedback-review-card.correct-feedback,
+.theme-dark-emerald [data-feedback-box="true"].correct-feedback {
+  background-color: #E8F5EE !important;
+  border-color: #2E9E5B !important;
+}
+
+/* Review sentences / explanation text: high-contrast deep ink navy/slate */
+.theme-dark-emerald .feedback-review-card p,
+.theme-dark-emerald .feedback-review-text,
+.theme-dark-emerald .feedback-explanation,
+.theme-dark-emerald [data-feedback-box="true"] p,
+.theme-dark-emerald [data-feedback-box="true"] .feedback-explanation {
+  color: #0F172A !important; /* Deep dark slate ink - fully legible on beige */
+  font-weight: 600 !important;
+}
+
+/* Review Title (Review / Not quite! Review:) */
+.theme-dark-emerald .feedback-review-card .feedback-title,
+.theme-dark-emerald .feedback-review-card.wrong-feedback .feedback-title,
+.theme-dark-emerald [data-feedback-box="true"] .feedback-title {
+  color: #8C2413 !important; /* Deep crimson / terracotta review header */
+  font-weight: 800 !important;
+}
+
+.theme-dark-emerald .feedback-review-card.correct-feedback .feedback-title,
+.theme-dark-emerald [data-feedback-box="true"].correct-feedback .feedback-title {
+  color: #166534 !important;
+}
+
+.theme-dark-emerald .feedback-review-card button,
+.theme-dark-emerald [data-feedback-box="true"] button {
+  background-color: #FAF4E6 !important;
+  color: #10264F !important;
+  border-color: #DFD0B2 !important;
+}
+
+/* 5. Hero portal box gradient -> Warm Beige illuminated card */
+.theme-dark-emerald .from-\[\#FFFDF7\],
+.theme-dark-emerald .via-\[\#FDF6E4\],
+.theme-dark-emerald .to-\[\#F7EACD\] {
+  --tw-gradient-from: #FAF4E6 var(--tw-gradient-from-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-via-stops, #FAF4E6, #F5EEDB, #EBE0C7) !important;
+  --tw-gradient-to: #EBE0C7 var(--tw-gradient-to-position) !important;
+}
+
+/* 6. Icons -> Royal & Sapphire Blue */
+.theme-dark-emerald svg.lucide,
+.theme-dark-emerald .lucide {
+  color: #1D4ED8 !important;
+  stroke: #1D4ED8 !important;
+}
+
+.theme-dark-emerald svg.lucide path[fill]:not([fill="none"]):not([fill="white"]):not([fill="transparent"]),
+.theme-dark-emerald svg.lucide polygon[fill]:not([fill="none"]),
+.theme-dark-emerald .fill-\[\#D4AF37\] {
+  fill: #2563EB !important;
+  color: #1D4ED8 !important;
+  stroke: #1D4ED8 !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Font utility classes */
+.font-nunito {
+  font-family: 'Nunito', system-ui, sans-serif;
+}
+
+.font-fraunces {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.font-dm-sans {
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.font-arabic {
+  font-family: 'Amiri', 'Noto Naskh Arabic', serif;
+  direction: rtl;
+  line-height: 1.9;
+}
+
+/* Solid offset buttons with zero blur */
+.btn-solid-offset {
+  transition: transform 150ms ease-out, box-shadow 150ms ease-out;
+  box-shadow: 0 4px 0 var(--color-lapis-dark);
+}
+
+.btn-solid-offset:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--color-lapis-dark);
+}
+
+.btn-solid-white {
+  box-shadow: 0 4px 0 #E4D6BA;
+}
+
+.btn-solid-white:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #E4D6BA;
+}
+
+.card-solid {
+  box-shadow: 0 4px 0 #E4D6BA;
+}
+
+/* Prevent accidental text selection on game touch controls */
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

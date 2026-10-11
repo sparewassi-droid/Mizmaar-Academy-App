@@ -1,0 +1,6 @@
+{
+  "name": "Tajweed Quest",
+  "description": "A premium, polished, game-like Qur'an learning app for Mizmaar Dawood Academy with Explorer (7-11) and Scholar (11-14) quest maps, timed stages, and live friend duels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE"]
+}
